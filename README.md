@@ -41,11 +41,16 @@ delete all / untagged ghcr containers in a repository
     # Default: true
     # needs docker installed
     except_untagged_multiplatform: true
-    # the owner type
+    # Include tagged signed packages corresponding to deleted packages
+    # without tags. Singed package has `sha256-<digest>.sig` tag where 
+    # respective untagged package has `sha256:<digest>` name
+    # required: false
+    # default: false
+    with_signed: true
+    # The owner type
     # required: true
     # choices: org, user
     owner_type: ''
-
 ```
 <!-- end usage -->
 
