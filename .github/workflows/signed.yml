@@ -30,7 +30,7 @@ jobs:
     with:
       image: 'p5'
       tag: 1
-      arg: 1
+#      arg: 1
       sign: true
 
   add_temp_pkgs4:
@@ -40,7 +40,7 @@ jobs:
     with:
       image: 'p5'
       tag: 1
-      arg: 2 # force new digest to generate signed image with new tag
+#      arg: 2 # force new digest to generate signed image with new tag
       sign: true
 
   delete_signed_package:

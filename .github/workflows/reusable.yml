@@ -71,8 +71,8 @@ jobs:
           build-args: I=${{ inputs.arg }}
           push: true
           # Enable caching for faster tests
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+#          cache-from: type=gha
+#          cache-to: type=gha,mode=max
           platforms: ${{ inputs.multiplatform && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
           # Disable automatic manifest list by disabling attestation facts generation
           provenance: ${{ !inputs.sign }}
