@@ -12,7 +12,7 @@ permissions:
   packages: write
 jobs:
   reset:
-    name: reset to a clean state
+    name: Reset to a clean state
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
       multiplatform: true
 
   clean_untagged_pkgs1:
-    name: clean untagged packages
+    name: Clean untagged packages
     runs-on: ubuntu-latest
     needs: add_temp_pkgs2
     steps:
@@ -80,7 +80,7 @@ jobs:
           fi
 
   clean_untagged_pkgs2:
-    name: clean untagged packages
+    name: Clean untagged packages
     runs-on: ubuntu-latest
     needs:   clean_untagged_pkgs1
     steps:
@@ -101,7 +101,7 @@ jobs:
           fi
 
   delete_package:
-    name: delete package
+    name: Delete package
     runs-on: ubuntu-latest
     needs: clean_untagged_pkgs2
     steps:
@@ -122,7 +122,7 @@ jobs:
           fi
 
   delete_multiple_packages:
-    name: delete multiple package
+    name: Delete multiple packages
     runs-on: ubuntu-latest
     needs: clean_untagged_pkgs2
     steps:
@@ -143,7 +143,7 @@ jobs:
           fi
 
   clean_repo:
-    name: delete all package in repo
+    name: Delete all packages in repo
     runs-on: ubuntu-latest
     needs:
       - delete_package
