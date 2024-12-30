@@ -10,6 +10,8 @@ concurrency: testing
 permissions:
   contents: read
   packages: write
+  # Required by nested `reusable.yml`.
+  id-token: write
 jobs:
   reset:
     name: Reset to a clean state
