@@ -50,6 +50,7 @@ jobs:
     with:
       image: ${{ matrix.type }}
       tag: ${{ matrix.i }}
+      arg: ${{ matrix.i }}${{ matrix.i }}
       multiplatform: true
 
   clean_untagged_pkgs1:
